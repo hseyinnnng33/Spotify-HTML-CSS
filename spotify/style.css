@@ -1,0 +1,506 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: #d5d6d5;;
+}
+
+ul{
+    list-style: none;
+}
+
+/* 
+font-family: D-DIN-Bold, Arial, Verdana, sans-serif;
+*/
+
+@font-face{
+    font-family: "D-DIN-Bold";
+    src: url("fonts/D-DIN-Bold.otf") format("truetype");
+} 
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Asap&family=Black+Han+Sans&family=Faster+One&family=Inter&family=Manrope&family=Nosifer&family=Orienta&family=Oswald:wght@600&family=Russo+One&family=Source+Sans+Pro:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Asap&family=Black+Han+Sans&family=Faster+One&family=Inter&family=Manrope&family=Nosifer&family=Orienta&family=Russo+One&family=Signika+Negative&family=Source+Sans+Pro:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Asap&family=Black+Han+Sans&family=Faster+One&family=Inter&family=Manrope&family=Nosifer&family=Orienta&family=Roboto+Slab&family=Russo+One&family=Source+Sans+Pro:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Asap&family=Black+Han+Sans&family=Faster+One&family=Inter&family=Lexend+Deca:wght@600&family=Manrope&family=Nosifer&family=Orienta&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,900&family=Russo+One&display=swap');
+/*  
+
+<span class="material-symbols-outlined">home</span> HOME
+<i class="fa-solid fa-magnifying-glass"></i> search
+<span class="material-symbols-outlined">subscriptions</span> kitaplık
+<span class="material-symbols-outlined">add</span> ekle
+<i class="fa-solid fa-heart"></i> kalp
+<span class="material-symbols-outlined">favorite</span> kalp 2
+<span class="material-symbols-outlined">pause</span> stop
+<span class="material-symbols-outlined">more_horiz</span> üç nokta
+<i class="fa-solid fa-hashtag"></i> hastag
+<span class="material-symbols-outlined">schedule</span> time
+<span class="material-symbols-outlined">skip_next</span> sonraki şarkı
+<span class="material-symbols-outlined">shuffle</span> karışık
+<span class="material-symbols-outlined">repeat</span> tekrar
+<span class="material-symbols-outlined">skip_previous</span> önceki şarkı
+<span class="material-symbols-outlined">mic</span> mikrafon
+<span class="material-symbols-outlined">volume_down</span> ses
+<span class="material-symbols-outlined">computer</span> computer
+<i class="fa-brands fa-spotify"></i> logo
+<img src="https://seeded-session-images.scdn.co/v1/img/artist/2q3GG88dVwuQPF4FmySr9I/tr" alt="">
+<img src="https://i.scdn.co/image/ab67616d0000485158c4833cc8b1a3d6e4890940" alt="">
+B3B3B3 14PX
+<i class="fa-solid fa-chevron-right"></i>
+*/
+
+#genel{
+    width: 100%;
+    position: relative;
+}
+
+.yan{
+    display: flex;
+    position: relative;
+}
+
+.solbar{
+    width: 304px;
+    background-color: #000000;
+    height: 100vh;
+    position: sticky;
+    left: 0;
+    top: 0;
+}
+
+.solbar .icerik{
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+}
+
+.solbar .icerik .ust .logo img{
+    width: 130px;
+}
+
+.solbar .icerik .ust .uc-icerik{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.solbar .icerik .ust .uc-icerik ul li{
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+.solbar .icerik .ust .uc-icerik ul li a{
+    font-size: 15px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    padding-left: 15px;
+    color: #ededed;
+}
+
+.solbar .icerik .ust .uc-icerik ul li i{
+    font-size: 20px;
+    color: #d7d4d4;
+}
+
+.orta-icerik{
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.orta-icerik ul li{
+    align-items: center;
+    padding: 10px 0;
+}
+
+.fa-plus{
+    background-color: rgb(179, 179, 179);
+    font-size: 15px;
+    padding: 4px;
+    border-radius: 2px;
+    color: #000000;
+}
+
+.orta-icerik ul li a{
+    padding-left: 15px;
+    font-size: 15px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+}
+
+.fa-heart{
+    background-color: rgb(145, 80, 175);
+    font-size: 15px;
+    padding: 4px;
+    border-radius: 4px;
+    color: #ededed;
+}
+
+.alt-icerik{
+    margin-top: 10px;
+}
+
+.alt-icerik ul li{
+    padding: 8px 0;
+}
+
+.alt-icerik ul li a{
+    color: #e7e9e7;
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+}
+
+
+
+footer{
+    position: sticky;
+    bottom: 0;
+    background-color: #1f1f1f;
+}
+
+
+footer .icerik{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+footer .icerik .sol{
+    display: flex;
+    align-items: center;
+}
+
+footer .icerik .sol img{
+    width: 56px;
+    height: 56px;
+}
+
+footer .icerik .sol .yazi{
+    margin-left: 10px;
+}
+
+footer .icerik .sol .yazi .bir-p{
+    color: #fff;
+    font-size: 14px;
+    font-family: 'Lexend Deca', sans-serif;
+    margin-bottom: 5px;
+}
+
+footer .icerik .sol .yazi .iki-p{
+    color: #d5d6d5;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 11px;
+}
+
+footer .icerik .sol .logo-1{
+    margin-left: 20px;
+}
+
+footer .icerik .sol .logo-1 i{
+    background-color: #1f1f1f;
+}
+
+footer .icerik .orta{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ust-1{
+    display: flex;
+    align-items: center;
+    padding: 5px 0;
+}
+
+.ust-1 span{
+    color: #ededed;
+    font-size: 25px;
+    padding: 0 15px;
+    cursor: pointer;
+}
+
+.ust-1 .bir{
+    display: block;
+    background-color: #fff;
+    color: #000000;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ust-1 .bir:active{
+    transform: scale(0.9);
+}
+
+#span{
+    background-color: #fff;
+    color: #000000;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#span:active{
+    transform: scale(0.9);
+}
+
+.orta .alt-1{
+    display: flex;
+    align-items: center;
+}
+
+.orta .alt-1 .bir{
+    color: #d7d4d4;
+    font-size: 14px;
+    padding-right: 10px;
+}
+
+.orta .alt-1 .div-1{
+    width: 500px;
+    height: 4px;
+    background-color: #7a7a7a;
+    border-radius: 20px;
+}
+
+.orta .alt-1 .div-1 .div-2{
+    width: 20%;
+    height: 100%;
+    background-color: #fff;
+    border-radius: 20px;
+}
+
+.orta .alt-1 .iki{
+    color: #d7d4d4;
+    font-size: 14px;
+    padding-left: 10px;
+}
+
+footer .sag{
+    display: flex;
+}
+
+footer .sag .icerik-2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer .sag .icerik-2 span{
+    font-size: 22px;
+    color: #d5d6d5;
+    padding: 0 5px;
+}
+
+footer .sag .icerik-2 .sag-logo{
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+}
+
+footer .sag .icerik-2 .sag-logo .div-2{
+    width: 100px;
+    height: 4px;
+    background-color: #7a7a7a;
+    border-radius: 20px;
+}
+
+footer .sag .icerik-2 .sag-logo .div-1{
+    width: 40%;
+    height: 100%;
+    background-color: #fff;
+    border-radius: 20px;
+}
+
+.orta-icerik1{
+    width: 100%;
+    background: linear-gradient(#8d4e1a,#000000,#000000, #000000, #000000, #000000,#000000,#000000,#000000,#000000,#000000,#000000,#000000,#000000);
+}
+
+.orta-genel{
+    width: 100%;
+    padding: 15px 30px;
+}
+
+.orta-ust{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.orta-ust .oklar{
+    display: flex;
+}
+
+.orta-ust .oklar a{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #6a401e;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.orta-ust .oklar a i{
+    color: #fff;
+}
+
+.orta-ust .hesap {
+    display: flex;
+}
+
+.orta-ust .hesap .buton1{
+    border: 1px solid #fff;
+    background-color: #6a401e;
+    border-radius: 20px;
+    padding:  7px 15px;
+    color: #fff;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.orta-ust .hesap .buton2{
+    border: none;
+    background-color: #2f1f12;
+    border-radius: 20px;
+    cursor: pointer;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding-right: 10px;
+    font-size: 16px;
+}
+
+.orta-ust .hesap .buton2 img{
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    margin: 2px;
+    margin-right: 8px;
+}
+
+.orta-ust .hesap .buton2 i{
+    margin-left: 10px;
+}
+
+.orta-listeler{
+    width: 100%;
+    margin-top: 40px;
+}
+
+.orta-listeler h2{
+    color: #fff;
+    font-size: 30px;
+}
+
+.orta-listeler .kartlar{
+    width: 100%;
+    flex-wrap: wrap;
+    display: flex;
+    padding: 10px 0;
+}
+
+::-webkit-scrollbar {
+    display: none;
+    visibility: hidden;
+    opacity: 0
+}
+
+.orta-listeler .kartlar .bir-kart{
+    width: 390px;
+    height: 80px;
+    margin: 10px 0;
+    border-radius: 5px;
+    background-color: #463b31;
+    display: flex;
+    align-items: center;
+}
+
+.orta-listeler .kartlar .bir-kart img{
+    height: 100%;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.orta-listeler .kartlar .bir-kart p{
+    font-size: 17px;
+    color: #fff;
+    font-weight: 600;
+    padding: 0 20px;
+}
+
+.orta-listeler .kartlar .bir1-kart{
+    margin-right: 15px;
+}
+
+.orta-listeler-2{
+    width: 100%;
+    margin-top: 20px;
+}
+
+.orta-listeler-2 .listeler-1{
+    width: 100%;
+    margin: 40px 0;
+}
+
+.orta-listeler-2 .listeler-1 h2{
+    color: #fff;
+    font-size: 22px;
+}
+
+.orta-listeler-2 .listeler-1 .kartlar-orta{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.orta-listeler-2 .listeler-1 .kartlar-orta .iki-kart{
+    width: 190px;
+    background-color: #1c1c1c;
+    margin-right: 15px;
+    padding: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.orta-listeler-2 .listeler-1 .kartlar-orta .iki-kart:hover{
+    background-color: #3a3a3a;
+    transition: 1s;
+}
+
+.orta-listeler-2 .listeler-1 .kartlar-orta .iki-kart img{
+    width: 100%;
+    border-radius: 5px;
+}
+
+.orta-listeler-2 .listeler-1 .kartlar-orta .iki-kart .yazilar{
+    margin-top: 10px;
+}
+
+.orta-listeler-2 .listeler-1 .kartlar-orta .iki-kart h2{
+    font-size: 18px;
+}
+
+.orta-listeler-2 .listeler-1 .kartlar-orta .iki-kart p{
+    color: #8d8d8d;
+    font-size: 15px;
+    margin-top: 5px;
+    line-height: 22px;
+}
+
+
